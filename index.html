@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>ใบแจ้งค่าไฟฟ้า</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
+    padding:20px;
+}
+
+.invoice{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    border:3px solid #444;
+    padding:20px;
+}
+
+.header{
+    text-align:center;
+    border-bottom:2px solid #ccc;
+    padding-bottom:10px;
+}
+
+.header h2{
+    margin:5px 0;
+}
+
+.section{
+    margin-top:20px;
+}
+
+.section-title{
+    background:#ddd;
+    padding:8px;
+    font-weight:bold;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+th, td{
+    border:1px solid #999;
+    padding:8px;
+    text-align:center;
+}
+
+th{
+    background:#6f7c84;
+    color:white;
+}
+
+.text-left{
+    text-align:left;
+}
+
+.total{
+    font-size:18px;
+    font-weight:bold;
+    color:#c00000;
+}
+
+.footer{
+    margin-top:20px;
+    font-size:13px;
+    border-top:1px solid #ccc;
+    padding-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="invoice">
+
+    <div class="header">
+        <h2>ใบแจ้งค่าไฟฟ้า</h2>
+        <p>Smart Invoice (ไม่ใช่ใบเสร็จรับเงิน/ใบกำกับภาษี)</p>
+        <p>การไฟฟ้าส่วนภูมิภาค</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">ข้อมูลผู้ใช้ไฟฟ้า</div>
+        <p><b>ชื่อ:</b> นายกัมพล ชาญเชิงพาณิช</p>
+        <p><b>ที่อยู่:</b> 17 ถ.หมู่บ้านปาล์มสปริงส์ ต.คอหงส์ อ.หาดใหญ่ จ.สงขลา</p>
+        <p><b>เลขที่ใบแจ้งค่าไฟ:</b> 219010513810</p>
+        <p><b>กำหนดชำระ:</b> 06 มิถุนายน 2568</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">รายละเอียดค่าไฟฟ้า</div>
+        <table>
+            <tr>
+                <th>รายการ</th>
+                <th>จำนวน</th>
+                <th>ราคา/หน่วย</th>
+                <th>จำนวนเงิน (บาท)</th>
+            </tr>
+            <tr>
+                <td class="text-left">หน่วยที่ 1-150</td>
+                <td>150</td>
+                <td>3.2484</td>
+                <td>487.26</td>
+            </tr>
+            <tr>
+                <td class="text-left">หน่วยที่ 151-400</td>
+                <td>178</td>
+                <td>4.2218</td>
+                <td>751.48</td>
+            </tr>
+            <tr>
+                <td class="text-left">ค่าบริการรายเดือน</td>
+                <td colspan="2">-</td>
+                <td>24.62</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <div class="section-title">สรุปค่าใช้จ่าย</div>
+        <table>
+            <tr>
+                <td class="text-left">รวมเงินค่าไฟฟ้าฐาน</td>
+                <td>1,263.36</td>
+            </tr>
+            <tr>
+                <td class="text-left">ภาษีมูลค่าเพิ่ม 7%</td>
+                <td>92.96</td>
+            </tr>
+            <tr>
+                <td class="text-left total">รวมเงินทั้งสิ้น</td>
+                <td class="total">1,401.00</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="footer">
+        <p>เอกสารนี้ออกโดยระบบอัตโนมัติ ไม่ต้องลงนาม</p>
+        <p>สอบถามข้อมูล โทร. 1129 (PEA Contact Center)</p>
+    </div>
+
+</div>
+
+</body>
+</html>
