@@ -1,0 +1,61 @@
+
+body{
+  background:#eee;
+  font-family:Tahoma;
+}
+.bill{
+  width:1000px;
+  margin:20px auto;
+  background:#fff;
+  border:3px solid #7c3fa1;
+  padding:20px;
+}
+.header{
+  display:grid;
+  grid-template-columns:120px 1fr 250px;
+  align-items:center;
+}
+.logo{width:100px}
+.header-text h1{
+  color:#7c3fa1;
+  margin:0;
+}
+.header-right{
+  text-align:right;
+}
+.amount{
+  background:#f6e7b8;
+  padding:10px;
+  font-size:22px;
+  font-weight:bold;
+}
+.customer{
+  margin-top:15px;
+  border-top:2px solid #7c3fa1;
+  padding-top:10px;
+}
+.meter{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:15px;
+}
+.meter th,.meter td{
+  border:1px solid #999;
+  padding:6px;
+  text-align:center;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin-top:20px;
+}
+.box{
+  border:2px solid #cbb6df;
+  padding:10px;
+  text-align:center;
+}
+.total{
+  background:#f6e7b8;
+  font-weight:bold;
+}
