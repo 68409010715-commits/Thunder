@@ -2,57 +2,215 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>ใบแจ้งค่าไฟฟ้า</title>
-<link rel="stylesheet" href="style.css">
+<title>ใบแจ้งค่าไฟฟ้า PEA</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:#eee;
+  font-family:Tahoma, sans-serif;
+}
+.bill{
+  max-width:1100px;
+  margin:20px auto;
+  background:#fff;
+  border:4px solid #7a3db8;
+  padding:16px;
+}
+
+/* HEADER */
+.header{
+  display:grid;
+  grid-template-columns:100px 1fr 320px;
+  gap:10px;
+  align-items:center;
+}
+.logo{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  border:4px solid #7a3db8;
+}
+.header-center h1{
+  color:#7a3db8;
+  margin:0;
+}
+.header-center .red{
+  color:red;
+  font-size:14px;
+}
+.header-right{
+  display:grid;
+  gap:6px;
+}
+.box{
+  padding:8px;
+  border-radius:6px;
+  text-align:center;
+  border:1px solid #7a3db8;
+}
+.purple{background:#e7dbf5}
+.yellow{
+  background:#f7e7b8;
+  font-size:22px;
+  font-weight:bold;
+}
+
+/* Invoice info */
+.invoice-box{
+  margin-top:10px;
+  border:2px solid #7a3db8;
+  padding:10px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:6px;
+  font-size:13px;
+}
+.invoice-box div{
+  border-bottom:1px dotted #aaa;
+  padding-bottom:4px;
+}
+.invoice-box strong{float:right}
+
+/* Customer */
+.customer{
+  margin-top:12px;
+  border-top:2px solid #7a3db8;
+  padding-top:8px;
+  font-size:14px;
+}
+
+/* Meter */
+.meter{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:10px;
+  font-size:13px;
+}
+.meter th,.meter td{
+  border:1px solid #aaa;
+  padding:6px;
+  text-align:center;
+}
+
+/* Detail */
+.detail{
+  display:grid;
+  grid-template-columns:1.2fr 0.8fr;
+  gap:10px;
+  margin-top:14px;
+}
+.detail table{
+  width:100%;
+  border-collapse:collapse;
+}
+.detail th,.detail td{
+  border:1px solid #aaa;
+  padding:6px;
+  font-size:13px;
+}
+.tariff th{
+  background:#e7dbf5;
+}
+.sum td{
+  background:#f7e7b8;
+  font-weight:bold;
+}
+
+/* Notice */
+.red-note{
+  margin-top:12px;
+  border:2px solid red;
+  padding:8px;
+  color:red;
+  text-align:center;
+  font-size:13px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .header{grid-template-columns:1fr}
+  .detail{grid-template-columns:1fr}
+}
+</style>
 </head>
+
 <body>
+
 <div class="bill">
-  <div class="header">
-    <img src="logo.png" class="logo">
-    <div class="header-text">
-      <h1>ใบแจ้งค่าไฟฟ้า</h1>
-      <span>Smart Invoice (ไม่ใช่ใบเสร็จรับเงิน/ใบกำกับภาษี)</span>
-    </div>
-    <div class="header-right">
-      <div><b>หมายเลขผู้ใช้ไฟฟ้า</b><br>020007328623</div>
-      <div class="amount">1,401.00<br><small>บาท</small></div>
-    </div>
-  </div>
 
-  <div class="customer">
-    <div><b>ชื่อผู้ใช้ไฟฟ้า</b> นายสมพงษ์ ชาญชัย</div>
-    <div><b>ที่อยู่</b> 17 หมู่บ้านสันป่าสัก ต.คลองชล อ.หาดใหญ่ จ.สงขลา 90110</div>
+<!-- HEADER -->
+<div class="header">
+  <img src="logo.png" class="logo">
+  <div class="header-center">
+    <h1>ใบแจ้งค่าไฟฟ้า</h1>
+    <div class="red">Smart Invoice (ไม่ใช่ใบเสร็จรับเงิน/ใบกำกับภาษี)</div>
+    <b>การไฟฟ้าส่วนภูมิภาค</b>
   </div>
-
-  <table class="meter">
-    <tr>
-      <th>รหัสการไฟฟ้า</th><th>สายส่ง</th><th>รหัสเครื่องวัด</th>
-      <th>ประเภท</th><th>วันที่อ่าน</th><th>รอบบิล</th><th>แรงดัน</th>
-    </tr>
-    <tr>
-      <td>L07101</td><td>LHAY0268</td><td>20887203</td>
-      <td>1125</td><td>18/05/2568</td><td>05/2568</td><td>&lt;22 kV</td>
-    </tr>
-  </table>
-
-  <div class="grid">
-    <div class="box">
-      <h3>หน่วยไฟฟ้า</h3>
-      <p>328 หน่วย</p>
-    </div>
-    <div class="box">
-      <h3>ค่าไฟฟ้าฐาน</h3>
-      <p>1,263.36 บาท</p>
-    </div>
-    <div class="box">
-      <h3>VAT 7%</h3>
-      <p>92.96 บาท</p>
-    </div>
-    <div class="box total">
-      <h3>รวมทั้งสิ้น</h3>
-      <p>1,401.00 บาท</p>
-    </div>
+  <div class="header-right">
+    <div class="box purple">CA No<br><strong>020007328623</strong></div>
+    <div class="box purple">Invoice<br><strong>219010513810</strong></div>
+    <div class="box yellow">1,401.00 บาท</div>
   </div>
+</div>
+
+<!-- INVOICE INFO -->
+<div class="invoice-box">
+  <div>Bank Account <strong>903-403375207016</strong></div>
+  <div>Due Date <strong>06/06/2568</strong></div>
+</div>
+
+<!-- CUSTOMER -->
+<div class="customer">
+  <div><b>ชื่อผู้ใช้ไฟฟ้า:</b> นายสมพงษ์ ชาญชัย</div>
+  <div><b>ที่อยู่:</b> 17 หมู่บ้านสันป่าสัก ต.คลองชล อ.หาดใหญ่ จ.สงขลา 90110</div>
+</div>
+
+<!-- METER -->
+<table class="meter">
+<tr>
+  <th>รหัสการไฟฟ้า</th><th>สายส่ง</th><th>รหัสเครื่องวัด</th>
+  <th>ประเภท</th><th>วันที่อ่าน</th><th>รอบบิล</th><th>แรงดัน</th>
+</tr>
+<tr>
+  <td>L07101</td><td>LHAY0268</td><td>20887203</td>
+  <td>1125</td><td>18/05/2568</td><td>05/2568</td><td>&lt;22 kV</td>
+</tr>
+</table>
+
+<!-- DETAIL -->
+<div class="detail">
+
+<!-- TARIFF -->
+<table class="tariff">
+<tr><th>รายการ</th><th>อัตรา</th><th>จำนวนเงิน</th></tr>
+<tr><td>1–150 หน่วย</td><td>3.2484</td><td>487.26</td></tr>
+<tr><td>151–400 หน่วย</td><td>4.2218</td><td>751.48</td></tr>
+<tr><td>Service Charge</td><td>-</td><td>24.62</td></tr>
+<tr><td>รวมค่าไฟฟ้าฐาน</td><td></td><td>1,263.36</td></tr>
+<tr><td>Ft</td><td></td><td>64.68</td></tr>
+<tr><td>Sub Total</td><td></td><td>1,328.04</td></tr>
+<tr><td>VAT 7%</td><td></td><td>92.96</td></tr>
+<tr class="sum"><td>Grand Total</td><td></td><td>1,401.00</td></tr>
+</table>
+
+<!-- HISTORY -->
+<table>
+<tr><th>ประวัติการใช้ไฟ</th><th>หน่วย</th></tr>
+<tr><td>17/04/68</td><td>316</td></tr>
+<tr><td>18/03/68</td><td>296</td></tr>
+<tr><td>15/02/68</td><td>227</td></tr>
+<tr><td>18/01/68</td><td>267</td></tr>
+<tr><td>18/12/67</td><td>217</td></tr>
+</table>
+
+</div>
+
+<div class="red-note">
+*** กรณีมีค่าไฟฟ้าค้างชำระเกินกำหนด โปรดชำระทันที ***
+</div>
+
 </div>
 </body>
 </html>
